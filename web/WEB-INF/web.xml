@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>UserDetails</servlet-name>
+        <servlet-class>com.controller.UserDetails</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>com.controller.Home</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Recipe</servlet-name>
+        <servlet-class>com.controller.Recipe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RecipeImage</servlet-name>
+        <servlet-class>com.controller.RecipeImage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDetails</servlet-name>
+        <url-pattern>/UserDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Recipe</servlet-name>
+        <url-pattern>/Recipe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecipeImage</servlet-name>
+        <url-pattern>/RecipeImage</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <description>Location to store Recipe's image</description>
+        <param-name>recipeImageStorePath</param-name>
+        <param-value>
+             D:\university\fall 2015\COMP 583 Software Engineering Management\project\Eatatouille\web\images\
+         </param-value>
+    </context-param>
+    <context-param>
+        <description>Location to display Recipe's image</description>
+        <param-name>recipeImageDisplayPath</param-name>
+        <param-value>
+             images\
+         </param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
